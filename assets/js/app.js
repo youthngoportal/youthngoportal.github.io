@@ -23,12 +23,13 @@ app.controller("ExmpCtrl",function  ($scope) {
 app.controller("ListCtrl",function  ($scope) {
 	//
 	$scope.ngos = [
-    { name: "NGO Name",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "Gandhinagar", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic2.jpg"},
-    { name: "NGO1",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "IN", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic.jpg"},
-    { name: "NGO2",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "IN", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic2.jpg"},
-    { name: "NGO3",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "IN", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic3.jpg"},
-    { name: "NGO4",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "IN", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic4.jpg"},
-    { name: "NGO5",   founded: 1900,  founder: "Name", tagline: "karke dikhayege", infromation:"We are very angry.", email:"xyz", city: "IN", state: "MP", phone: 8080808008, website:"link", image: "assets/ngos/pic1.jpg"},
+    { name: "District Rural Youth Development Association",   founded: 1900,  founder: "Mr Amichandbhai N. Shrimali", tagline: "karke dikhayege", infromation:"We are very angry.", email:"districtruralyouthdevlopment@yahoo.co.in", city: "Palanpur", state: "Gujarat", phone: 9924215281, website:"", image: "assets/ngos/default.png"},
+    { name: "Bharatiya Seva Samaj",   founded: 1900,  founder: "Dr. T.G. Patel", tagline: "karke dikhayege", infromation:"The organisation .", email:"contact@sevakproject.org", city: "Vadodara", state: "Gujarat", phone: 912652321485, website:"http://sevakproject.org/", image: "assets/ngos/bss.png"},
+    { name: "Gen Next",   founded: 1900,  founder: "Rutvik Makwana", tagline: "karke dikhayege", infromation:"We are very angry.", email:"shalaparisar@gmail.com", city: "Chotila", state: "Gujarat", phone: 91275128052, website:"", image: "assets/ngos/default.png"},
+    { name: "Ahmedabad Study Action Group",   founded: 1900,  founder: "Kirtee Shah", tagline: "karke dikhayege", infromation:"We are very angry.", email:"asag@ad1.vsnl.net.in", city: "Ahmedabad", state: "Gujarat", phone: 7926589093, website:"", image: "assets/ngos/default.png"},
+    { name: "All India Social Educational Charitable Trust",   founded: 1900,  founder: "Bharat Ramnath Pawar", tagline: "karke dikhayege", infromation:"We are very angry.", email:"aisect17166@gmail.com", city: "Ahmedabad", state: "Gujarat", phone: 7930420790, website:"", image: "assets/ngos/default.png"},
+    { name: "ARY Skill Development",   founded: 1900,  founder: "Yashpal Sihag", tagline: "karke dikhayege", infromation:"We are very angry.", email:"info@hamaripathshala.org", city: "Ahmedabad", state: "Gujarat", phone: 9350543669, website:"http://www.hamaripathshala.org", image: "assets/ngos/default.jpg"},
+    { name: "ARZOO",   founded: 1900,  founder: "Sulekha Ali", tagline: "karke dikhayege", infromation:"We are very angry.", email:"info@hamaripathshala.org", city: "Ahmedabad", state: "Gujarat", phone: 9374041393, website:"http://www.arzoolive.org/", image: "assets/ngos/arzoo.png"},
 
   ];
 $scope.mode = 1;

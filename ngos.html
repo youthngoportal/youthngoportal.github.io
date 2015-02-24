@@ -63,8 +63,8 @@
         
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h4>WE WORK HARD TO ACHIEVE EXCELLENCE</h4>
-                    <p>AND WE ARE HAPPY TO DO IT</p>
+                    <h4>Find NGO's </h4>
+                    <p>Search and sort NGO by name and location.</p>
                 </div>
             </div>
             <!-- row -->
@@ -78,23 +78,12 @@
 
         <div class="row">
 
-            <div ng-app="" ng-init="firstName='John'">
-
-                <p>The name is <span ng-bind="firstName"></span>
-                </p>
-
-            </div>
-
         </div>
         <!-- row -->
         <div class="row" id="userList">
             <br>
             <br>
             <div ng-controller="ListCtrl">
-
-                <h1>Find NGO's </h1>
-                <h4></h4>
-                <hr>
                 <div class="clearfix">
                     <ul class="nav nav-pills pull-right">
                         <li ng-class="{'active':mode==1}" title="list"><a href="#" ng-click="mode=1"><i class="fa fa-list fa-4x"></i></a>
@@ -105,25 +94,28 @@
                         </li>
                     </ul>
                 </div>
+                <form class="form-inline">
+                        <input ng-model="query" type="text" placeholder="Search Here" autofocus>
+                </form>
                 <hr>
 
                 <div class="row">
-                    <form class="form-inline">
+                    <!-- <form class="form-inline">
                         <input ng-model="query" type="text" placeholder="Search Here" autofocus>
                     </form>
-                    <br>
+                    <br> -->
 
                     <div ng-repeat-start="ngo in ngos | filter:query |orderBy:'name' " ng-class="{'col-xs-4':mode==1, 'col-xs-3':mode==2, 'col-xs-6':mode==3}">
 
                         <div class="well">
-                        	<a href="" ng-click="open()"><img src="{{ngo.image}}" class="img-responsive"></a>
+                        	<a href="" ng-click="launch('create')"><img src="{{ngo.image}}" class="img-responsive"></a>
                             <h3 class="cap" ng-hide="mode==1">{{ngo.name}}</h3>
                             <!-- <h4 class="text-muted">{{ngo.information}}</h4> -->
 
                             <p ng-show="mode==3">
                                 {{ngo.city}}, {{ngo.state}}<br> 
-                                {{ngo.email}}<br >
-                                {{ngo.phone}}
+                                <b>{{ngo.email}}</b><br >
+                                <b>{{ngo.phone}}</b>
                             </p>
                         </div>
                     </div>
@@ -133,11 +125,17 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <p>
-                                    {{ngo.founded}}, {{ngo.state}}<br> <br> 
-                                    {{ngo.infromation}}
-                                    {{ngo.founder}}
+                                    {{ngo.city}}, {{ngo.state}}<br> <br>                                     
                                 </p>
+                                <p><b>Phone:</b> {{ngo.phone}}</p>
+                                <p><b>Contact Person:</b> {{ngo.founder}}</p>
                             </div>
+                            <div class="col-sm-6 text-right">
+				              <div class="hidden-xs">
+				                <a href="{{ngo.website}}">{{ngo.website}}</a><br>
+				                <h3><span class="label label-primary" >{{ngo.email}}</span></h3>
+				              </div>
+				            </div>
                         </div>
                     </div>
                     <div ng-repeat-end="" ng-class="{'clearfix':mode==1}"></div>
@@ -248,5 +246,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
