@@ -40,5 +40,3 @@ app.controller("ListCtrl",function  ($scope) {
 $scope.mode = 1;
 
 });
-
-});
