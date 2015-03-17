@@ -44,13 +44,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Youth NG<i class="fa fa-circle"></i> Portal</a>
-            </div>
+                <a class="navbar-brand" href="index.html"><span style="color: #F96900;">Youth</span> <span style="color: white;">NGO</span><span style="color: green;"> Portal</span></a>            </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">HOME</a>
                     </li>
                     <li class="active"><a href="ngos.html">NGO'S</a>
+                    </li>
+                    <li><a href="register.html">Register NGO</a>
                     </li>
                     
                 </ul>
@@ -74,7 +75,7 @@
     <!--  bluewrap -->
 
 
-    <div class="container">
+    <div class="container main">
 
         <div class="row">
 
@@ -105,10 +106,10 @@
                     </form>
                     <br> -->
 
-                    <div ng-repeat-start="ngo in ngos | filter:query |orderBy:'name' " ng-class="{'col-xs-4':mode==1, 'col-xs-3':mode==2, 'col-xs-6':mode==3}">
+                    <div ng-repeat-start="ngo in ngos | filter:query |orderBy:'city' " ng-class="{'col-xs-4':mode==1, 'col-xs-3':mode==2, 'col-xs-6':mode==3}">
 
                         <div class="well">
-                        	<a href="" ng-click="launch('create')"><img src="{{ngo.image}}" class="img-responsive"></a>
+                        	<a href="" ng-click="ekathuwaModalBasic()"><img src="{{ngo.image}}" class="img-responsive"></a>
                             <h3 class="cap" ng-hide="mode==1">{{ngo.name}}</h3>
                             <!-- <h4 class="text-muted">{{ngo.information}}</h4> -->
 
@@ -169,12 +170,12 @@
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-xs-4 col-xs-offset-4"><img src="{{currUser.picture}}" class="img-thumbnail img-responsive img-circle">
+                                    <div class="col-xs-4 col-xs-offset-4"><img src="{{ngo.image}}" class="img-thumbnail img-responsive img-circle">
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <h4 class="text-center"><i class="fa fa-fw fa-map-marker fa-2x"></i> {{currUser.location.street}} {{currUser.location.city}}, {{currUser.location.state}}</h4>
+                                    <h4 class="text-center"><i class="fa fa-fw fa-map-marker fa-2x"></i>{{ngo.city}}, {{currUser.location.state}}</h4>
                                     <h4 class="text-center"><i class="fa fa-fw fa-phone fa-2x"></i> {{currUser.cell}}</h4>
                                     <h4 class="text-center"><i class="fa fa-fw fa-envelope-o fa-2x"></i> {{currUser.email}}</h4>
                                     <h4 class="text-center"><i class="fa fa-fw fa-user fa-2x"></i> {{currUser.username}}</h4>
